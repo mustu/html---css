@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Layout</title>
+<style>
+	*
+	{
+		box-sizing:border-box;
+	}
+	.header
+	{
+		background-color:#CCCCFF;
+		text-align:center;
+		padding:1px;
+	}
+	.topnav
+	{
+		background-color:#9999FF;
+		text-align:center;
+		padding:1px;
+		color:#FFFFFF;
+	}
+	/* Create three unequal columns that floats next to each other */
+	.column
+	{
+	float:left;
+	padding:1px;
+	}
+	/* Left and right column */
+	.column.side
+	{
+		
+		text-align:center;
+		width:25%;
+	}	
+	/* Middle column */
+	.column.middle
+	{
+		background-color:#E6E6FF;
+		text-align:center;
+		width: 50%;
+	}
+	/* Clear floats after the columns */
+	.row:after
+	{
+		content:"";
+		display:table;
+		clear:both;
+	}
+	/* Responsive layout - 
+	makes the three columns stack on top of each other 
+	instead of next to each other */
+	@media screen and (max-width:600px)
+	{
+		.column.side, .column.middle
+		{
+			width:100%
+		}
+	}
+	.footer
+	{
+		background-color:#0000CC;
+		text-align:center;
+		padding:1px;
+		color:#FFFFFF;
+	}
+</style>
+</head> 
+<body>
+
+<div class="header">
+	<p>Header</p>
+</div>
+
+<div class="topnav">
+	<p>Top Navigation</p>
+</div>
+
+<div class="row">
+	<div class="column side" style="background-color:#6666FF;color:#FFFFFF">
+		<p>Column-left</p>
+	</div>
+
+	<div class="column middle"style="background-color:#3333FF;color:#FFFFFF">
+		<p>Column Middle</p>
+	</div>
+
+	<div class="column side" style="background-color:#0000FF;color:#FFFFFF">
+		<p>Column-right</p>
+	</div>
+</div>
+
+<div class="footer">
+	<p>Footer</p>
+</div>
+
+</body>
+</html>
